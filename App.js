@@ -6,41 +6,51 @@
  * @flow strict-local
  */
 
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-class App extends React.Component {
-  render() {
-    let book = 'React Native in Action'
-    return (
-      <BookDisplay book={book} />
-    )
-  }
-}
-
-class BookDisplay extends React.Component {
-  render() {
-    return (
-      <View>
-        <Text>{this.props.book}</Text>
-      </View>
-    )
-  }
-}
-
-export default App;
+ import React, { Component } from 'react';
+ import {
+   SafeAreaView,
+   StyleSheet,
+   ScrollView,
+   View,
+   Text,
+   StatusBar,
+   CameraRoll,
+ } from 'react-native';
+ 
+ import {
+   Header,
+   LearnMoreLinks,
+   Colors,
+   DebugInstructions,
+   ReloadInstructions,
+ } from 'react-native/Libraries/NewAppScreen';
+ 
+ class MainComponent extends Component {
+   constructor() {
+     super()
+     this.state = { loading: true, data: {} }
+   }
+   componentDidMount() {
+     // #simulate ajax call
+     setTimeout(() => {
+       this.setState({
+         loading: false,
+         data: {name: 'Nadar Dabit', age: 35}
+       })
+     }, 2000)
+   }
+   render() {
+     if(this.state.loading) {
+       return <Text>Loading</Text>
+     }
+     const { name, age } = this.state.data
+     return (
+       <View>
+         <Text>Name: {name}</Text>
+         <Text>Age: {age}</Text>
+       </View>
+     )
+   }
+ }
+ 
+ export default MainComponent;
