@@ -26,30 +26,17 @@
  } from 'react-native/Libraries/NewAppScreen';
  
  class MainComponent extends Component {
-   constructor() {
-     super()
-     this.state = { loading: true, data: {} }
+   handleClick() {
+     this._timeout = setTimeout(() => {
+       this.openWidget();
+     }, 2000);
    }
-   componentDidMount() {
-     // #simulate ajax call
-     setTimeout(() => {
-       this.setState({
-         loading: false,
-         data: {name: 'Nadar Dabit', age: 35}
-       })
-     }, 2000)
+   componentWillUnmount() {
+     clearTimeout(this._timeout);
    }
+ 
    render() {
-     if(this.state.loading) {
-       return <Text>Loading</Text>
-     }
-     const { name, age } = this.state.data
-     return (
-       <View>
-         <Text>Name: {name}</Text>
-         <Text>Age: {age}</Text>
-       </View>
-     )
+     return <SomeComponent handleClick={() => this.handleClick()} />
    }
  }
  
