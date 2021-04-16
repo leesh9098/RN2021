@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { View, ScrollView, StyleSheet, TextInput } from 'react-native'
+import { View, ScrollView, StyleSheet } from 'react-native'
 import Heading from './Heading'
 import Input from './Input'
 import Button from './Button'
 import TodoList from './TodoList' //3.16 코드 추가
 let todoIndex = 0
-
+import TabBar from './TabBar' //3.25 코드 추가
 class App extends Component {
     constructor() {
         super()
@@ -18,6 +18,8 @@ class App extends Component {
         // 3.17 코드 추가
         this.toggleComplete = this.toggleComplete.bind(this)
         this.deleteTodo = this.deleteTodo.bind(this)
+        // 3.22 코드 추가
+        this.setType = this.setType.bind(this)
     }
 
     inputChange(inputValue) {
@@ -58,20 +60,26 @@ class App extends Component {
         this.setState({ todos })
     }
 
+    //3.22 코드 추가
+    setType(type) {
+        this.setState({ type })
+    }
+
     render() {
-        const { inputValue, todos } = this.state
+        const { todos, inputValue, type } = this.state
 
         return (
             <View style={styles.container}>
-                <ScrollView
-                    keyboardShouldPersistTaps='always'
-                    style={styles.content}>
+                <ScrollView keyboardShouldPersistTaps='always' style={styles.content}>
                     <Heading />
                     <Input inputValue={inputValue} inputChange={(text) => this.inputChange(text)} />
                     {/* 3.19 코드 추가 */}
-                    <TodoList toggleComplete={this.toggleComplete} deleteTodo={this.deleteTodo} todos={todos} />
+                    {/* 3.25 코드 추가 type={type} */}
+                    <TodoList type={type} toggleComplete={this.toggleComplete} deleteTodo={this.deleteTodo} todos={todos} />
                     <Button submitTodo={this.submitTodo} />
                 </ScrollView>
+                {/* 3.25 코드 추가 */}
+                <TabBar type={type} setType={this.setType} />
             </View>
         )
     }
