@@ -1,5 +1,5 @@
 # REACT NATIVE
-### 21.04.30
+## 21.04.30
 - - -
 #### React Native에서 Style적용하고 관리하기
 + React Native는 내장 컴포넌트를 제공하는데, 이들 컴포넌트에는 특정한 스타일을 지원함
