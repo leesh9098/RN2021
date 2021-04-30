@@ -79,6 +79,8 @@ const buttons = StyleSheet.create({
 export { styles, buttons }
 ```
 
+
+
 ```javascript
 // App.js
 import React, { Component } from 'react'
