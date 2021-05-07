@@ -1,6 +1,5 @@
 # REACT NATIVE
 ## 21.04.30
-- - -
 #### React Native에서 Style적용하고 관리하기
 + React Native는 내장 컴포넌트를 제공하는데, 이들 컴포넌트에는 특정한 스타일을 지원함
   그러나 한 컴포넌트의 특정 스타일은 다른 컴포넌트에 적용할 수도 있고 아닐 수도 있음
@@ -115,7 +114,6 @@ export default class App extends Component {
   이 경우 컴포넌트와 스타일 파일은 같은 경로에 저장
 
 ## 21.05.07
-- - -
 #### 구조분해할당
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 - - -
