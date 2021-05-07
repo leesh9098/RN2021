@@ -120,8 +120,8 @@ export default class App extends Component {
 + View 컴포넌트는 다른 요소를 감싸고 View 컴포넌트 내에 UI 코드 블록을 만들 수 있다는 점에서 HTML의 div 태그와 유사
 #### 배경색 설정하기
 + backgroundColor 속성
-|:지원되는 색 형식:|:Example:|
-|#rgb|'#06f'|
+:지원되는 색 형식:|:Example:
+#rgb|'#06f'
 #rgba                                       ex)'#06fc'
 #rrggbb                                     ex)'#0066ff'
 #rrggbbaa                                   ex)'ff00ff00'
