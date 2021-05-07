@@ -120,18 +120,19 @@ export default class App extends Component {
 + View 컴포넌트는 다른 요소를 감싸고 View 컴포넌트 내에 UI 코드 블록을 만들 수 있다는 점에서 HTML의 div 태그와 유사
 #### 배경색 설정하기
 + backgroundColor 속성
-| :지원되는 색 형식: | :Example: |
-| ------ | ------ |
-#rgb|'#06f'
-#rgba                                       ex)'#06fc'
-#rrggbb                                     ex)'#0066ff'
-#rrggbbaa                                   ex)'ff00ff00'
-rgb(num, num, num)                          ex)'rgb(0, 102, 255)'
-rgb(num, num, num, alpha)                   ex)'rgba(0, 102, 255, .5)'
-hsl(색상, 채도, 명도)                        ex)'hsl(216, 100%, 50%)'
-hsla(색상, 채도, 명도, alpha)                ex)'hsl(216, 100%, 50%, .5)'
-  + hue: 360도로 구성된 색상환(color wheel)의 1도를 의미. 0은 빨간색, 120은 녹색, 240은 파란색
-  + saturation: 색상의 강도. 회색 음영인 0%부터 선명한 색상인 100%까지 사용가능
-  + lightness: 0~100%의 값으로 0%는 검은색에 가까운 어두운색이고 100%는 흰색에 가까운 밝은색
-투명배경                                     ex)'transparent'
-CSS3 지정 색 이름(black, red, blue 외)       ex)'dodgerblue'
+
+|지원되는 색 형식|Example|
+|:------:|:------:|
+|#rgb|'#06f'|
+|#rgba|'#06fc'|
+|#rrggbb|'#0066ff'|
+|#rrggbbaa|'ff00ff00'|
+|rgb(num, num, num)|'rgb(0, 102, 255)'|
+|rgb(num, num, num, alpha)|'rgba(0, 102, 255, .5)'|
+|hsl(색상, 채도, 명도)|'hsl(216, 100%, 50%)'|
+|hsla(색상, 채도, 명도, alpha)|'hsl(216, 100%, 50%, .5)'|
+|투명배경|'transparent'|
+|CSS3 지정 색 이름(black, red, blue 외)|'dodgerblue'|
+    - hue: 360도로 구성된 색상환(color wheel)의 1도를 의미. 0은 빨간색, 120은 녹색, 240은 파란색
+    - saturation: 색상의 강도. 회색 음영인 0%부터 선명한 색상인 100%까지 사용가능
+    - lightness: 0~100%의 값으로 0%는 검은색에 가까운 어두운색이고 100%는 흰색에 가까운 밝은색
