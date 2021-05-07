@@ -116,8 +116,12 @@ export default class App extends Component {
 
 ## 21.05.07
 - - -
+#### 구조분해할당
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+- - -
 #### View 컴포넌트에 스타일 적용하기
 + View 컴포넌트는 다른 요소를 감싸고 View 컴포넌트 내에 UI 코드 블록을 만들 수 있다는 점에서 HTML의 div 태그와 유사
+- - -
 #### 배경색 설정하기
 + backgroundColor 속성
 
