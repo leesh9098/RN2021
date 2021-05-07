@@ -121,6 +121,7 @@ export default class App extends Component {
 #### 배경색 설정하기
 + backgroundColor 속성
 :지원되는 색 형식:|:Example:
+------|------
 #rgb|'#06f'
 #rgba                                       ex)'#06fc'
 #rrggbb                                     ex)'#0066ff'
