@@ -1,4 +1,30 @@
 # REACT NATIVE
+## 21.05.07
+#### 구조분해할당
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+- - -
+#### View 컴포넌트에 스타일 적용하기
++ View 컴포넌트는 다른 요소를 감싸고 View 컴포넌트 내에 UI 코드 블록을 만들 수 있다는 점에서 HTML의 div 태그와 유사
+- - -
+#### 배경색 설정하기
++ backgroundColor 속성
+
+|지원되는 색 형식|Example|
+|:------:|:------:|
+|#rgb|'#06f'|
+|#rgba|'#06fc'|
+|#rrggbb|'#0066ff'|
+|#rrggbbaa|'ff00ff00'|
+|rgb(num, num, num)|'rgb(0, 102, 255)'|
+|rgb(num, num, num, alpha)|'rgba(0, 102, 255, .5)'|
+|hsl(색상, 채도, 명도)|'hsl(216, 100%, 50%)'|
+|hsla(색상, 채도, 명도, alpha)|'hsl(216, 100%, 50%, .5)'|
+|투명배경|'transparent'|
+|CSS3 지정 색 이름(black, red, blue 외)|'dodgerblue'|
+    - hue: 360도로 구성된 색상환(color wheel)의 1도를 의미. 0은 빨간색, 120은 녹색, 240은 파란색
+    - saturation: 색상의 강도. 회색 음영인 0%부터 선명한 색상인 100%까지 사용가능
+    - lightness: 0~100%의 값으로 0%는 검은색에 가까운 어두운색이고 100%는 흰색에 가까운 밝은색
+
 ## 21.04.30
 #### React Native에서 Style적용하고 관리하기
 + React Native는 내장 컴포넌트를 제공하는데, 이들 컴포넌트에는 특정한 스타일을 지원함
@@ -112,29 +138,3 @@ export default class App extends Component {
 + 컴포넌트 내에 스타일 시트를 선언하는 방법의 장점은 하나의 파일에 컴포넌트와 컴포넌트가 사용할 스타일을 완전히 캡슐화 할 수 있다는 것임 이때 스타일은 컴포넌트 이후에 작성
 + 별도의 스타일 파일을 만드는 경우 파일명은 임의로 정할 수 있지만 일반적으로 styles.js로 함    ※확장자가 css가 아니라 js
   이 경우 컴포넌트와 스타일 파일은 같은 경로에 저장
-
-## 21.05.07
-#### 구조분해할당
-https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
-- - -
-#### View 컴포넌트에 스타일 적용하기
-+ View 컴포넌트는 다른 요소를 감싸고 View 컴포넌트 내에 UI 코드 블록을 만들 수 있다는 점에서 HTML의 div 태그와 유사
-- - -
-#### 배경색 설정하기
-+ backgroundColor 속성
-
-|지원되는 색 형식|Example|
-|:------:|:------:|
-|#rgb|'#06f'|
-|#rgba|'#06fc'|
-|#rrggbb|'#0066ff'|
-|#rrggbbaa|'ff00ff00'|
-|rgb(num, num, num)|'rgb(0, 102, 255)'|
-|rgb(num, num, num, alpha)|'rgba(0, 102, 255, .5)'|
-|hsl(색상, 채도, 명도)|'hsl(216, 100%, 50%)'|
-|hsla(색상, 채도, 명도, alpha)|'hsl(216, 100%, 50%, .5)'|
-|투명배경|'transparent'|
-|CSS3 지정 색 이름(black, red, blue 외)|'dodgerblue'|
-    - hue: 360도로 구성된 색상환(color wheel)의 1도를 의미. 0은 빨간색, 120은 녹색, 240은 파란색
-    - saturation: 색상의 강도. 회색 음영인 0%부터 선명한 색상인 100%까지 사용가능
-    - lightness: 0~100%의 값으로 0%는 검은색에 가까운 어두운색이고 100%는 흰색에 가까운 밝은색
