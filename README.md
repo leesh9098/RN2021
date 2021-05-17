@@ -1,4 +1,28 @@
 # REACT NATIVE
+## 21.05.14
+#### borderRadius를 이용해서 모양 만들기
++ borderRadius속성은 사각형의 모서리에 대한 속성으로 방향이 top부터 시계방향인 right, bottom, left 이기는 하나
+  borderTopRightRadius, borderBottomRightRadius, borderBottomLeftRadius, borderTopLeftRadius로 지정한다.
++ 다음과 같이 borderRadius속성으로 한번에 지정할 수도 있다.
+  + borderRadius: top, right, bottom, left
+#### 컴포넌트의 위치를 margin과 padding으로 지정하기
++ 명시적으로 지정할 수도 있지만, 반응형에는 적합하지 않다.
++ 각 컴포넌트의 위치는 다른 컴포넌트의 위치에 상대적으로 지정하는 것이 바람직하다.
++ 이 경우 한 컴포넌트를 이동하면 각 컴포넌트의 상대 위치에 따라 다른 컴포넌트가 움직이기 때문이다.
++ margin을 이용해서 컴포넌트 사이의 상대적 위치를 정의한다.
++ padding을 이용해서 컴포넌트 테두리로 부터 컴포넌트의 상대적 위치를 정의한다.
+#### margin 속성 이용하기
++ margin 속성에는 margin, marginTop, marginRight, marginBottom, marginLeft가 있다.
++ 구 버전에서는 ios와 android의 스타일에 차이가 있었으나 현재는 동일하게 구현이 가능하다.
+#### padding 속성 이용하기
++ padding 속성에는 padding, paddingLeft, paddingRight, paddingTop, paddingBottom 속성이 있다.
++ 컴포넌트와 부모 컴포넌트 사이의 공간을 지정하는 마진과 달리, 패딩은 컴포넌트의 테두리로부터 자식 엘리먼트에 적용된다.
+#### position을 이용해서 컴포넌트 배치하기
++ 구현은 css와 유사하지만, css만큼 다양한 옵션을 지원하지는 않는다.
++ 기본적으로 리액트 네이티브에서 모든 요소는 다른 요소들에 상대적으로 배치된다.
++ position이 absolute로 지정되면, 해당 요소의 위치는 부모요소의 위치를 기준으로 배치된다.
++ position 속성에는 relative(상대값:기본값)과 absolute(절대값)가 있다.
++ css의 static, fixed는 지원하지 않는다.
 ## 21.05.07
 #### 구조분해할당
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
