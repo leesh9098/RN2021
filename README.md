@@ -1,4 +1,35 @@
 # REACT NATIVE
+## 21.05.21
+#### Text컴포넌트 vs View컴포넌트
++ flex속성을 제외하고는 View에서 사용되는 대부분의 스타일을 Text에서도 사용할 수 있다.
++ 반대로 Text에서 사용하는 스타일을 View에서는 사용할 수 없다.
+#### font family 지정하기
++ css와는 다르게 fontFamily 속성에 여러 개의 폰트를 지정할 수 없다.
++ iOS에서는 monospace 옵션을 사용할 수 없으며, 사용할 경우 오류가 발생한다.
+  - "Unrecognized font family 'monospace'"
++  안드로이드에서는 지원하지 않는 폰트가 지정되면 기본 폰트를 사용한다.
++  기본 폰트 외에 다른 폰트를 사용하려면 Platform 컴포넌트를 이용한다.
+#### 기타 폰트 속성
++ [ fontSize ] 텍스트의 크기를 조정하며, 기본 크기는  14px이다.
++ [ fontStyle ] normal과 italic 두개의 옵션만 사용이 가능하다.
++ [ fontWeight ] 기본값은 normal또는 400이다.
+  - 'normal', 'bold', '100', '200', '300, '400', '500', '600', '700', '800', '900'
+#### 텍스트 장식하기
++ 플랫폼별 지원 스타일
++ iOS와 안드로이드: lineHeight, textAlign, textDecorationLine, textShadowColor, textShadowOffset, textShadowRadius
++ 안드로이드: textAlignVertical
++ iOS: letterSpacing, textDecorationColor, textDecorationStyle, writingDirection
+#### 네비게이션 개요
++ 앱의 가장 핵심기능 중 하나이다.
++ 앱을 개발하기 전에 네비게이션과 라우팅 계획을 반드시 수립해야 한다.
++ 대표적인 네비게이션으로는 탭(tab-based) 네비게이션, 스택(stack-based) 네비게이션, 드로어(drawer-based) 네비게이션이 있다.
+  - [ 탭 네비게이션 ]: 화면의 위나 아래에 탭이 있고, 탭을 터치하면 연결된 페이지로 라우팅 되는 형태이다. SNS 등에서 이 방식을 사용하고 있다.
+  - [ 스택 네비게이션]: 기존의 화면위에 다른 화면이 스택 구조로 쌓이는 방법으로, 화면 이동 후에는 스택에 있는 이전 화면으로 되돌아가거나 계속해서 다음 화면으로 이동할 수 있다. 실제 구현은 배열로 한다. 배열에 새 컴포넌트를 추가하면 새 화면이 나타나고, 이전으로 돌아가려면 마지막 화면을 스택에서 꺼내면 된다. 네비게이션 라이브러리는 이렇게 스택에 추가하고, 삭제하는 과정을 대신 처리해 준다.
+  - [ 드로어 네비게이션 ]: 화면의 왼쪽 혹은 오른쪽에서 나오는 전형적인 사이드 메뉴이다. 메뉴 항목을 선택하면, 드로어가 닫히고 메뉴 화면으로 이동한다.
++ 리액트 네이티브에서는 네비게이션 라이브러리를 지원하지 않는다.
++ 따라서 서드 파티의 네비게이션 라이브러리를 사용해야 한다.
++ React Navigation은 자바스크립트로 구현 되어있으며, React Native의 개발진이 추천하는 라이브러리이다.
++ 네이티브 방식으로 네비게이션을 구현에 관해 알고싶다면, Wix의 개발자들이 개발하고 관리하는 오픈소스 라이브러리인 React Native Navigation을 참고한다.
 ## 21.05.14
 #### borderRadius를 이용해서 모양 만들기
 + borderRadius속성은 사각형의 모서리에 대한 속성으로 방향이 top부터 시계방향인 right, bottom, left 이기는 하나
@@ -26,10 +57,8 @@
 ## 21.05.07
 #### 구조분해할당
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
-- - -
 #### View 컴포넌트에 스타일 적용하기
 + View 컴포넌트는 다른 요소를 감싸고 View 컴포넌트 내에 UI 코드 블록을 만들 수 있다는 점에서 HTML의 div 태그와 유사
-- - -
 #### 배경색 설정하기
 + backgroundColor 속성
 
@@ -152,7 +181,6 @@ export default class App extends Component {
 + Stylesheet에서는 style객체를 생성해서 각 스타일을 개별적으로 참조
 + render 메서드에서 스타일을 분리하는 것이 가독성이 좋으며 재활용에도 용의
 + 만일 중복된 property가 있을 때는 마지막으로 전달된 스타일이 이전 스타일을 재정의
-- - -
 #### 스타일 구성하기
 + 웹에서는 스타일이 모든 페이지에 적용되지만, React Native에서는 컴포넌트 단위로 적용
 + React Native는 컴포넌트가 중심이고, 따라서 컴포넌트를 재사용 가능하도록 하는 것을 목표로 함
