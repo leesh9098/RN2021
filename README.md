@@ -7,7 +7,9 @@
 npm install @react-navigation/native
 npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
 ```
-
++ [버튼을 클릭할 때마다 stack을 쌓아서 같은 화면을 무한으로 출력하는 코드](NaviApp/stack.js)
++ [디바이스의 하단에 Tab navigation바를 출력하는 코드](NaviApp/tab_navigation.js)
++ [디바이스의 화면에서 좌측부터 우측으로 드래그 했을 때 사이드 메뉴가 출력되는 drawer navigation코드](NaviApp/drawer.js)
 ## 21.05.21
 #### Text컴포넌트 vs View컴포넌트
 + flex속성을 제외하고는 View에서 사용되는 대부분의 스타일을 Text에서도 사용할 수 있다.
