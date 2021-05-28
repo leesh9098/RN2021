@@ -1,4 +1,13 @@
 # REACT NATIVE
+## 21.05.28
+#### React Navigation을 사용하여 네비게이션 바 만들기
++ 우측의 링크에 들어가면 여러가지 기능들의 예제가 있다. https://reactnavigation.org/
++ 위 링크의 기능들을 사용하려면 하단의 코드를 command창에서 npm이나 yarn으로 설치해야 한다. yarn명령어는 위 링크를 참조
+```
+npm install @react-navigation/native
+npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+```
+
 ## 21.05.21
 #### Text컴포넌트 vs View컴포넌트
 + flex속성을 제외하고는 View에서 사용되는 대부분의 스타일을 Text에서도 사용할 수 있다.
