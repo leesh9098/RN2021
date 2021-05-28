@@ -7,9 +7,16 @@
 npm install @react-navigation/native
 npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
 ```
-+ [버튼을 클릭할 때마다 stack을 쌓아서 같은 화면을 무한으로 출력하는 코드](NaviApp/stack.js)
++ [화면 중앙의 버튼을 클릭할 때마다 stack을 쌓아서 같은 화면을 무한으로 출력하는 코드](NaviApp/stack.js)
 + [디바이스의 하단에 Tab navigation바를 출력하는 코드](NaviApp/tab_navigation.js)
 + [디바이스의 화면에서 좌측부터 우측으로 드래그 했을 때 사이드 메뉴가 출력되는 drawer navigation코드](NaviApp/drawer.js)
++ [하단의 탭바에서 메뉴 클릭 시 해당하는 페이지로 넘어가고 focus된 페이지의 탭바는 tomato색상으로 변경되어 출력되는 코드](expoproject/materialbottomtabnavigator.js)
++ [하단의 탭바에서 메뉴 클릭 시 메뉴별로 백그라운드 색상이 변경되어 출력되는 코드](expoproject/bottomnavigation.js)
+#### expo와 react-native cli의 차이
++ react-native cli는 react-native의 개발진들이 만들고 운영하는 개발도구이고 expo는 expo팀에서 react-native개발을 쉽게 하기위해 만든 SDK이다.
++ react-native cli는 업데이트가 빠르게 반영되는 반면 expo는 react-native cli에 비해 업데이트가 늦다.
++ react-native cli에서 개발된 어플을 빌드하려면 Android Studio나 Xcode를 써야하는 번거로움이 있지만 expo는 웹에서 혹은 expo go 어플리케이션을 통해 직접 구현할 수 있다.
++ expo는 카메라, 위치, 알림, 센서 등에 접근할 수 있는 라이브러리가 존재한다.
 ## 21.05.21
 #### Text컴포넌트 vs View컴포넌트
 + flex속성을 제외하고는 View에서 사용되는 대부분의 스타일을 Text에서도 사용할 수 있다.
