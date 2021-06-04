@@ -14,6 +14,8 @@
 + 일반적으로 데이터를 전달하려면 컴포넌트 구조의 단계별로 props를 전달하지만 context를 이용하면 props를 사용할 필요가 없다. 왜냐하면 전역 객체이기 때문에 앱 전체에서 context를 참조할 수 있기 때문이다.
 #### React Native 앱에 Redux 구현하기
 + npm install redux react-redux 명령어를 입력하여 redux 패키지와 react-redux 패키지를 설치해야한다.
+#### 금일 수업 실습코드
++ [ch8](ch8/)
 ## 21.05.28
 #### React Navigation을 사용하여 네비게이션 바 만들기
 + 우측의 링크에 들어가면 여러가지 기능들의 예제가 있다. https://reactnavigation.org/
